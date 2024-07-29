@@ -1,0 +1,134 @@
+:root {
+  font-size: 16px;
+}
+
+/* colors */
+
+@White: hsl(0, 0%, 100%);
+@Lightpink: hsl(275, 100%, 97%);
+@Grayishpurple: hsl(292, 16%, 49%);
+@Darkpurple: hsl(292, 42%, 14%);
+
+/* fonts */
+@font-face {
+  font-family: 'main';
+  src: url('assets/fonts/WorkSans-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: 'main-italic';
+  src: url('assets/fonts/WorkSans-Italic-VariableFont_wght.ttf');
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url('assets/images/background-pattern-desktop.svg') no-repeat @Lightpink;
+  background-position: center top;
+  background-size: cover 50%;
+  font-family: 'main', 'Sans-Serif';
+}
+
+
+.faq-component {
+  min-width: 250px;
+  width: 90%;
+  max-width: 700px;
+  padding: 2em;
+  margin: 200px auto;
+  margin-bottom: 20px;
+  background: @White;
+  border-radius: 10px;
+
+  h1 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: @Darkpurple;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    color: @Darkpurple;
+  }
+
+  p {
+    line-height: 1.4;
+    font-size: 1rem;
+    color: @Grayishpurple;
+  }
+
+  &__head {
+    min-height: 50px;
+    padding-bottom: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  &__item {
+    &__head {
+
+      padding: .5em 0;
+      min-height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__body {
+      height: 0;
+      overflow: hidden;
+      border-bottom: 1px solid @Lightpink;
+      padding-bottom: 1.5em;
+      opacity: 0;
+      transition: all .3s ease-in-out;
+    }
+
+    &--active {
+      height: auto;
+      opacity: 1;
+    }
+  }
+
+  @media (max-width: 400px) {
+    h2 {
+      font-size: 1.1rem;
+    }
+
+    margin-top:100px
+  }
+}
+
+.attribution {
+  min-height: 50px;
+  background: @White;
+  padding: 1em;
+  width: 90%;
+  max-width: 700px;
+  color: @Grayishpurple;
+  margin: 10px auto;
+  border-radius: 1em .5em 1.9em .2em;
+
+  a {
+    color: @Darkpurple;
+    display: inline-block;
+    padding: .2em;
+    text-decoration: none;
+    font-weight: 700;
+    font-family: 'main-italic';
+  }
+
+  text-align: center;
+}
+
+@media (max-width: 400px) {
+  body {
+    background-image: url('/assets/images/background-pattern-mobile.svg');
+  }
+
+}

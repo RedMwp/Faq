@@ -1,0 +1,123 @@
+:root {
+  font-size: 16px;
+}
+
+/* colors */
+/* fonts */
+@font-face {
+  font-family: 'main';
+  src: url('assets/fonts/WorkSans-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: 'main-italic';
+  src: url('assets/fonts/WorkSans-Italic-VariableFont_wght.ttf');
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url('assets/images/background-pattern-desktop.svg') no-repeat hsl(275, 100%, 97%);
+  background-position: center top;
+  background-size: cover 50%;
+  font-family: 'main', 'Sans-Serif';
+}
+
+.faq-component {
+  min-width: 250px;
+  width: 90%;
+  max-width: 700px;
+  padding: 2em;
+  margin: 200px auto;
+  margin-bottom: 20px;
+  background: hsl(0, 0%, 100%);
+  border-radius: 10px;
+}
+
+.faq-component h1 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: hsl(292, 42%, 14%);
+}
+
+.faq-component h2 {
+  font-size: 1.5rem;
+  color: hsl(292, 42%, 14%);
+}
+
+.faq-component p {
+  line-height: 1.4;
+  font-size: 1rem;
+  color: hsl(292, 16%, 49%);
+}
+
+.faq-component__head {
+  min-height: 50px;
+  padding-bottom: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.faq-component__item__head {
+  padding: 0.5em 0;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.faq-component__item__body {
+  height: 0;
+  overflow: hidden;
+  border-bottom: 1px solid hsl(275, 100%, 97%);
+  padding-bottom: 1.5em;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.faq-component__item--active {
+  height: auto;
+  opacity: 1;
+}
+
+@media (max-width: 400px) {
+  .faq-component {
+    margin-top: 100px;
+  }
+
+  .faq-component h2 {
+    font-size: 1.1rem;
+  }
+}
+
+.attribution {
+  min-height: 50px;
+  background: hsl(0, 0%, 100%);
+  padding: 1em;
+  width: 90%;
+  max-width: 700px;
+  color: hsl(292, 16%, 49%);
+  margin: 10px auto;
+  border-radius: 1em 0.5em 1.9em 0.2em;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(292, 42%, 14%);
+  display: inline-block;
+  padding: 0.2em;
+  text-decoration: none;
+  font-weight: 700;
+  font-family: 'main-italic';
+}
+
+@media (max-width: 400px) {
+  body {
+    background-image: url('/assets/images/background-pattern-mobile.svg');
+  }
+}
